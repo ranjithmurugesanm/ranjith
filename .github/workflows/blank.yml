@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v2 
       - name: Build & Deploy
         env:
-            PRIVATE_KEY: ${{-----BEGIN RSA PRIVATE KEY-----
+            PRIVATE_KEY: 
 MIIEpAIBAAKCAQEArBKNGO78OFodyeUFzeqL5177oz7QsIvz7PIahU6DZ7SBFp9n
 FrKUZGRq0AwAuxBz/WXvrpeDtPJdRrudBlTP4HY5IQyQl54lhjrbGajMTr71nKgT
 bDa0GfFC+SgE8dPenwcmEDLYqm7IqyAkzusH1u7g7qfhz2Pm8Th0XvPXdJqpJGKe
@@ -39,9 +39,8 @@ dYfC5DCyclP5S85kvhCPLlCmSTAM8EbaUbxO/hHaJqMUUfXaHtd8JK17SJCw3oGm
 K4M5cmECgYAYsSsRm30UJeaHMLSyDkh9IMiHpU3DuXPolEVpNo9eS5R+LQ5M0QoE
 b9M1I4T1a6Csw+h/EkdG/5R/1ThwMw3dkoalS21c/bnv/kQ5ohnIDfGoZxvdPO75
 qAa9CnkNOx7lIsS1ZdbqAWJ4VLwwjqOskNxMf4+4K4boHqybO9vfuw==
------END RSA PRIVATE KEY----- }}
-            HOSTNAME: ${{ip-172-31-83-65}}
-            USER_NAME: ${{ubuntu}}
+            HOSTNAME:ip-172-31-83-65
+            USER_NAME:ubuntu
       
         run: |
           echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
